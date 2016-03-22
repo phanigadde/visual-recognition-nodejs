@@ -117,9 +117,9 @@ app.post('/api/classifiers', function(req, res, next) {
           return next(err);
         } else {
           // deletes the classifier after an hour
-          setTimeout(
-            visualRecognition.deleteClassifier.bind(visualRecognition, classifier),
-            ONE_HOUR);
+          //setTimeout(
+          //  visualRecognition.deleteClassifier.bind(visualRecognition, classifier),
+          //  ONE_HOUR);
           res.json(classifier);
         }
       });
