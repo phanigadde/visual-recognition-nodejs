@@ -216,7 +216,8 @@ app.post('/api/classify', app.upload.single('images_file'), function(req, res, n
 //  if (req.query.classifier_id) {
     var vparams = {
       images_file: file,
-      classifier_ids: ["MaximoCrackDetectV01_599245010"]
+      classifier_ids: ["Test01_1000695352"]
+//      classifier_ids: ["MaximoCrackDetectV01_599245010"]
     };
 
     visualRecognition.classify(vparams, function(err, results) {
