@@ -2,16 +2,16 @@ include ./sampleImages.jade
 
 mixin sampleInput(className)
   - var sampleImages = []
-  - sampleImages.push('images/samples/1.jpg')
-  - sampleImages.push('images/samples/2.jpg')
-  - sampleImages.push('images/samples/3.jpg')
-  - sampleImages.push('images/samples/4.jpg')
-  - sampleImages.push('images/samples/5.jpg')
-  - sampleImages.push('images/samples/6.jpg')
+  - sampleImages.push('images/samples/goodshape01.jpg')
+  - sampleImages.push('images/samples/goodshape02.jpg')
+  - sampleImages.push('images/samples/badshape04.jpg')
+  - sampleImages.push('images/samples/badshape02.jpg')
+  - sampleImages.push('images/samples/badshape01.jpg')
+  - sampleImages.push('images/samples/badshape03.jpg')
   - var images = []
   each dataset in datasets
     - var arr = []
-    each val in [0, 1, 2, 3, 4, 5]
+    each val in [0, 1, 2]
       - arr.push('images/datasets/' + dataset.id + '/test/' + val + '.jpg')
     - images.push(arr)
   form(id='#{className}--fileupload', class='#{className}--form', data-upload-template-id='template-upload-#{className}')
